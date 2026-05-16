@@ -1,0 +1,226 @@
+/* إعادة تعيين الأنماط الافتراضية */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* باقي الأنماط الخاصة بك */
+html {
+  scroll-behavior: smooth;
+  direction: rtl; /* تأكد من اتجاه النصوص والعناصر من اليمين لليسار */
+}
+
+body {
+  background: linear-gradient(to bottom, #2c2c2c, #1a1a1a);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: right; /* محاذاة النصوص إلى اليمين */
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 0.875rem;
+  }
+}
+
+header {
+  background: linear-gradient(to right, #4a1023, #333);
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #ffffff;
+}
+
+nav {
+  background: linear-gradient(to right, #333, #555);
+  overflow: hidden;
+}
+nav a {
+  float: right; /* التأكد من أن الروابط على اليمين */
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+nav a:hover {
+  background-color: #e91e63;
+  color: #ffffff;
+}
+
+.container {
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.section h2 {
+  color: #e91e63;
+  text-shadow: 1px 1px 2px #000;
+  font-size: 1.75rem;
+}
+
+.section p {
+  line-height: 1.6;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.profile-pic:hover {
+  box-shadow: 0 20px 70px rgba(251, 8, 125, 0.5);
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.skill-bar {
+  background-color: #333;
+  height: 12px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px #000;
+}
+.skill-level {
+  height: 100%;
+  background: linear-gradient(to right, #e91e63, #ff5722);
+}
+
+footer {
+  background: linear-gradient(to right, #333, #555);
+  text-align: center;
+  padding: 10px;
+  color: #ffffff;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+footer p {
+  margin: 0;
+}
+
+.contact-icons a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+.contact-icons a i {
+  font-size: 1.5em;
+}
+.contact-icons a:hover i {
+  color: #e91e63;
+  transform: scale(1.2);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #e91e63;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  display: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.back-to-top:hover {
+  background-color: #ff5722;
+  transform: scale(1.1);
+}
+
+.project {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #1a1a1a;
+}
+.project h3 {
+  margin-top: 0;
+}
+.project p {
+  color: #b0a4a4;
+}
+.project a {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px 15px;
+  color: rgb(255, 255, 255);
+  background-color: #2c2c2c;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.project a:hover {
+  background-color: #e91e63;
+}
+.project a img {
+  display: inline-block;
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+/* محاذاة النص داخل العنصر resume-selection */
+.resume-selection {
+  margin: 20px 0;
+  padding: 10px;
+  text-align: left; /* محاذاة النص بالكامل إلى اليمين */
+   /* تأكيد أن جميع العناصر داخل هذا العنصر ستكون من اليمين لليسار */
+}
+
+.resume-selection h3 {
+  color: #e91e63;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: right; /* التأكد من محاذاة العنوان إلى اليمين */
+}
+
+/* محاذاة الروابط داخل العنصر language-container */
+.language-container {
+  display: flex;
+  flex-direction: column; /* ترتيب العناصر عموديًا */
+  align-items: flex-end; /* محاذاة العناصر إلى اليمين */
+  gap: 15px; /* المسافة بين الروابط */
+  direction: ltr; /* التأكد من أن المحاذاة تكون من اليمين لليسار */
+}
+
+/* تعديل الأيقونات والنصوص داخل روابط اللغة */
+.language-option {
+  padding: 10px;
+  background: linear-gradient(to left, #2c2c2c, #444);
+  border: 1px solid #040303;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  width: 200px; /* عرض ثابت */
+  text-align: left; /* محاذاة النص داخل الرابط إلى اليمين */
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: flex; /* جعل الرابط يحتوي على خاصية flex لتوحيد المحاذاة */
+  justify-content: flex-end; /* محاذاة الأيقونة والنص إلى اليمين داخل الرابط */
+}
+
+.language-option:hover {
+  background: linear-gradient(to left, #e91e63, #e91e63);
+  transform: scale(1.05);
+}

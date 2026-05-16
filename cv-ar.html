@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>السيرة الذاتية (عربي)</title>
+    <!-- وصف السيرة الذاتية -->
+    <meta
+      name="description"
+      content="السيرة الذاتية لعصام منصور، متخصص في الأمن السيبراني. تشمل المهارات، الخبرات، والمشاريع في مجال الأمان السيبراني."
+    />
+
+    <!-- كلمات رئيسية -->
+    <meta
+      name="keywords"
+      content="سيرة ذاتية، عصام منصور، الأمن السيبراني، اختبار الاختراق، مهارات أمان الإنترنت"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 200vh;
+        overflow-y: scroll;
+        text-align: center;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+      }
+      .button-container {
+        position: fixed;
+        bottom: 20px;
+        left: 20px; /* تعديل الوضع إلى اليسار في النسخة العربية */
+        display: flex;
+        gap: 20px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .btn {
+        padding: 15px;
+        background-color: #351b1b;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 50%;
+        width: 70px; /* تكبير الزر */
+        height: 70px; /* تكبير الزر */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn img {
+        width: 40px; /* زيادة حجم الأيقونة */
+        height: 40px; /* زيادة حجم الأيقونة */
+      }
+    </style>
+  </head>
+  <body>
+    <img src="cv-ar.svg" alt="السيرة الذاتية" />
+    <!-- تعديل الصورة هنا للسيرة الذاتية بالعربية -->
+
+    <div class="button-container" id="button-container">
+      <!-- صورة الرجوع (يمكنك تعديلها هنا) -->
+      <button class="btn" onclick="goBack()">
+        <img src="back-icon.svg" alt="رجوع" />
+      </button>
+
+      <!-- صورة تحميل PDF -->
+      <button class="btn" onclick="downloadPDF()">
+        <img src="download-icon.svg" alt="تحميل" />
+      </button>
+    </div>
+
+    <script>
+      window.onscroll = function () {
+        var scrollPosition = window.scrollY;
+        var documentHeight = document.documentElement.scrollHeight;
+        var windowHeight = window.innerHeight;
+
+        if (scrollPosition + windowHeight >= documentHeight - 100) {
+          document.getElementById("button-container").style.opacity = 1;
+        } else {
+          document.getElementById("button-container").style.opacity = 0;
+        }
+      };
+
+      function goBack() {
+        window.close();
+      }
+
+      function downloadPDF() {
+        const link = document.createElement("a");
+        link.href = "cv-ar.pdf"; <!-- تعديل الرابط هنا للسيرة الذاتية بالعربية -->
+        link.download = "cv-ar.pdf";
+        link.click();
+      }
+    </script>
+  </body>
+</html>
